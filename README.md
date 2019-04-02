@@ -7,7 +7,7 @@ Hornet is a client-side JavaScript userscript created for homeschooling (online 
 
 - Ensure you've installed [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey) for Firefox or [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) for Chrome.
 - [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey) is also available for Firefox.
-- Navigate to the `hornet.js` file (or click [here](https://github.com/njmacmurchy96/hornet/blob/master/hornet.js)) and copy its contents.
+- Navigate to the `hornet.js` file (or click [here](https://github.com/njmacmurchy96/hornet/blob/master/hornet.js) for the raw file) and copy its contents.
 - Open the Tampermonkey/Greasemonkey dashboard.
 - Click `New User Script` and place the script contents within the newly created script.
 - You're all set!
