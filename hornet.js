@@ -1,37 +1,19 @@
 // ==UserScript==
-// @name        Hornet
-// @namespace 	https://github.com/njmacmurchy96
-// @version  	1.8
-// @author      Noah MacMurchy
-// @description Adds a button that allows you to get the answer(s) of the question currently selected.
-// @include  	https://monarch.aop.com/*
-// @run-at      document-end
+// @name          Hornet
+// @namespace     https://github.com/njmacmurchy96/hornet
+// @version       2.1
+// @author        Noah MacMurchy
+// @description   Adds a button that allows you to get the answer(s) of the question currently selected.
+// @include       https://monarch.aop.com/*
+// @run-at        document-end
 // ==/UserScript==
-
-/******************** ******************** ******************** 
-                            Hornet
-                      Noah MacMurchy © 2019 
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>. 
-******************** ******************** ******************** */
 
 // Create our window to our URL/source w/ '_blank' to avoid popup blocking or other JS issues
 // TODO: Update width and height based on iframe size
 function createWindow(url) {
     let win = window.open(url,
-        '_blank',
-        'status=no,location=no,toolbar=no,menubar=no,width=800,height=500');
+                          '_blank',
+                          'status=no,location=no,toolbar=no,menubar=no,width=845,height=430');
     win.focus();
 }
 
@@ -67,12 +49,11 @@ addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < frames.length; i++) {
         // Check if the id is the questionFrame to get the current question and
         //  insert our button.
-        if (frames[i].id == 'questionFrame') {
+        if (frames[i].id === 'questionFrame') {
             // Wait for the questionFrame to finish loading for trying to grab or create anything.
             frames[i].addEventListener('load', function() {
                 // Check if "Get Answer" button already created.
-                if (document.getElementById('getAnswer') != undefined)
-                    return;
+                if (document.getElementById('getAnswer') != undefined) return;
                 // Get the current curiculum/lesson URL for the questions (returns full URL: https://monarch.aop.com)
                 let curriculum = frames[i].src;
                 // Create instance of the answer button
