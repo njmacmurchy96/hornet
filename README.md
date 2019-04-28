@@ -26,3 +26,5 @@ On the *Lessons* page there exists an iframe named `questionFrame` which contain
 
 #### Disclaimer
 This was created for educational purposes; it was not made to abuse vulnerabilities, exploits, or otherwise mistakes left by the developers of [Monarch](https://monarch.aop.com).
+
+###### Yo, *Alpha Omega Publishings*, your developers left ***everything*** client-sided. Including being able to just submit a lesson and get a 100% with just a click of a button.
